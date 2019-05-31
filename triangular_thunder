@@ -1,0 +1,31 @@
+var canvas_width = 720;
+var padding = 40;
+var line_count = 56;
+var spacing = (canvas_width - 2*padding)/(line_count -1);
+var bar = spacing*2;
+let angle = 0;
+
+function setup() {
+  createCanvas(canvas_width, canvas_width);
+  angleMode(DEGREES);
+}
+
+function draw() {
+  background(255);
+  for(i=0; i <= line_count; i++)
+  {
+    for (j=0;j<=line_count;j++)
+    {
+      push();
+      var x1 = padding+i*spacing;
+      var y1 = padding+j*spacing;
+      var y2 = y1+bar;
+      line(x1, y1, x1, y2);
+      translate(x1, y1+spacing);
+      rotate(angle);
+      line(0, -spacing, 0, spacing);
+      pop();
+     }
+   }
+  angle = angle+2;
+ }
