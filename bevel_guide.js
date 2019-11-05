@@ -1,4 +1,4 @@
-var createCanvas, background, width, height, ellipse, phase = 0, speed = 0.02, maxCircleSize = 20, sin, cos;
+var createCanvas, background, width, height, ellipse, phase = 0, speed = 0.03, maxCircleSize = 20, sin, cos;
 
 
 function setup() {
@@ -9,13 +9,13 @@ function setup() {
 function draw() {
     "use strict";
 
-    background(90);
+    background(0);
     var x = width / 2;
     var y = height / 2 + sin(phase) * 50;
     phase = frameCount * speed;
     var sizeOffset = (cos(phase) + 1) * 0.5;
     var circleSize = sizeOffset * maxCircleSize;
 
-    ellipse(x, y, 15, 10);
+    ellipse(x, y, circleSize, circleSize);
 
 }
