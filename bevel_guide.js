@@ -20,6 +20,7 @@ function draw() {
 
     for (var col = 0; col < numCols; col += 1) {
       for (var row = 0; row < numRows; row += 1) {
+        fill(lerpColor(colorA, colorB, row / numRows));
         var colOffset = map(col, 0, numCols, 0, TWO_PI);
         var x = map(col, 0, numCols, 50, width - 50);
         var y = height / 2 + row * 10 + sin(phase + colOffset) * 50;
