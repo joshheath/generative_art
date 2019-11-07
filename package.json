@@ -1,0 +1,19 @@
+{
+  "name": "generative_art",
+  "version": "1.0.0",
+  "description": "Some simple attempts at generative art using javascript and p5 software.",
+  "main": "ancient_silver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshheath/generative_art.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshheath/generative_art/issues"
+  },
+  "homepage": "https://github.com/joshheath/generative_art#readme"
+}
