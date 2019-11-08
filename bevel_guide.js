@@ -36,11 +36,11 @@ function draw() {
           // offsets the phase calculation based on column number
             var colOffset = map(col, 0, numCols, 0, TWO_PI);
             // x determines the position of the circles across the page
-            var x = map(col, 0, numCols, 50, width - 50);
+            var x = map(col, 0, numCols, 50, width - 20);
 
             for (var row = 0; row < numRows; row += 1) {
               // y determines the position of circles up / down the page
-              var y = height / 2 + row * 10 + sin(strandPhase + colOffset) * 50;
+              var y = height / 2.5 + row * 10 + sin(strandPhase + colOffset) * 50;
               // gives a cosine wave between 0 and 1 rather than -1 and 1
               var sizeOffset = (cos(strandPhase - (row / numRows) + colOffset) + 1) * 0.5;
 
